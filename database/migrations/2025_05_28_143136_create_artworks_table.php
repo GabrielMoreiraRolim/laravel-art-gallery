@@ -12,9 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('artworks', function (Blueprint $table) {
-            $table->id();
+            $table->id(); // id da obra
+            $table->string('title'); // nome da obra
+            $table->string('image_url'); // link da imagem
             $table->timestamps();
         });
+ 
     }
 
     /**
